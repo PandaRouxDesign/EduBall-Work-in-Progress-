@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+    body {
+	width:1920px;
+	height:1080px;
+    margin: 0;
+    padding: 0;
+	overflow:hidden;
+	position:fixed;
+
+    }
+
+
+    p, h1, h2, a, #neueDatei {
+	  font-family: "Didact Gothic";
+	}
+	  
+	h2 {	
+	  text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+    }
+	
+    h1 {
+	  text-transform:uppercase;
+	  /*-webkit-text-stroke: 2px white;*/
+	  text-align: center;
+      font-size: 100px;
+      font-weight: 900;
+    }
+	
+	#neueDatei {
+	font-size: 16px;	
+	position: absolute;
+	color: yellow;
+	text-transform:none;
+	text-decoration:none;
+	left: 860px;
+	bottom: 100px;
+    }
+	
+	#neueDatei:hover {
+	  -webkit-text-fill-color: orange;
+    }
+	

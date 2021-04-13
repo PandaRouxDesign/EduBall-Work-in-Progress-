@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang "de">
+<head>
+<meta charset="utf-8"
+<meta name="viewport" "content="width=device-width, initial-scale=1.0">
+
+
+<!--CSS -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="generalCSS.css">
+<link rel="stylesheet" href="startseite.css">
+<link rel="stylesheet" href="intro.css">
+<link rel="stylesheet" href="spiel.css">
+<link rel="stylesheet" href="siiieg.css">
+
+<!--JAVASCRIPT -->
+<script src="Spiel.js">
+<script src="confetti.js"></script>
+
+<title>EDU-BALL</title>
+
+<!------Seitenwechsel-Skript---->
+    <script>
+    function show(shown, hidden) {
+      document.getElementById(shown).style.display='block';
+      document.getElementById(hidden).style.display='none';
+      return false;
+    }</script>
+<!------------------------------->    
+    
+</head>
+
+<body>
+
+
+<!----------------STARTSEITE-------------------------->
+<div id="Startseite">
+
+        <div id="Wolke8"></div>
+        <div id="Wolke4"></div>
+        <div id="Wolke2"></div>
+        <div id="Wolke6"></div>
+        <div id="Wolke7"></div>
+        <div id="Wolke3"></div>
+        <div id="Wolke1"></div>
+        <div id="Wolke5"></div>        
+                
+        <div id="StartseiteHGPlatz"></div>
+        <div id="StartseiteGras"></div>
+        <div id="StartseiteLogo"></div>
+        <div id="StartseiteSchiri"></div>
+        
+        <form>
+        <label for="input" class="Fileloader"></label>
+        <input type="file" id="input" size="200" />
+        </form>
+        <a id="neueDatei" href="Spieldatei-erstellen.html">SPIELDATEI ANLEGEN</a>
+        
+
+<!---Seitenwechsler--->        
+<a href="#" onclick="return show('Intro','Startseite');">Spiel starten</a>
+</div>
+
+<!-------------------------INTRO-------------------------->
+<div id="Intro">
+<div id="VS"></div>
+<div id="IntroHase"></div>
+<div id="IntroMaus"></div>
+<div id="LogoHase"></div>
+<div id="LogoMaus"></div>
+
+<!---Seitenwechsler--->        
+<a href="#" onclick="return show('Spiel','Intro');">Zum Fußballfeld</a>
+
+</div>
+
+
+<!-------------------------SPIEL-------------------------->
+<div id="Spiel">
+<div id="Aufgabe"> <span class="vertikalMitte">
+					<h2> Lorem Ipsum Dolor <br>
+					Sit Amet Ipsum Dolor <br>
+					Sit Amet Dolor Sit Amet <br>
+					Amet Lorem Ipsum </h2> 
+</span> </div>
+
+<div id="PunkteHase"><span class="vertikaleMitte">
+					<h2>99</h2></span></div>
+<div id="PunkteMaus"><span class="vertikaleMitte">
+					<h2>9</h2></span></div>
+
+<div class="FeldHase" id="FeldHase2"></div>
+<div class="FeldHase" id="FeldHase1"></div>
+
+<div class="FeldMaus" id="FeldMaus2"></div>
+<div class="FeldMaus" id="FeldMaus1"></div>
+
+<div id="TorHase"></div>
+<div id="TorMaus"></div>
+
+<div id="SpielBall"></div>
+
+<div id="SpielSchiri"><span id="SpielSchiriSprite"></span></div>
+<div id="SpielerHase"><span id="SpielerHaseSprite"></span></div>
+<div id="SpielerMaus"><span id="SpielerMausSprite"></span></div>
+
+<div id="SpielerNameHase"><h1>Hasi Hase</h1></div>
+<div id="SpielerNameMaus"><h1>Mausi Maus</h1></div>
+
+<div id="Tooor"></div>
+
+<!---Seitenwechsler--->        
+<a id="Schlusspfiff" href="#" onclick="return show('Sieg','Spiel');"></a>
+
+</div>
+
+<!-------------------------SSSIEEEEG-------------------------->
+<div id="Sieg"">
+<div id="TeamHase" class="Team"></div>
+<div id="TeamMaus" class="Team"></div>
+
+<div id="Pokal"><span id="PokalWurf"></span></div>
+
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+
+
+</div>
+</body>
+
+</html>
+

@@ -1,0 +1,429 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*-----------------------------HG------------------------*/
+#Startseite {
+	background-image:url(Assets/0StartseiteHGHimmel.png);
+	width:1920px;
+	height:1080px;
+	overflow:hidden;
+	position:fixed;
+
+}
+
+#StartseiteHGPlatz {
+      background-image:url(Assets/0StartseiteHGPlatz.png);
+      position: absolute;
+      width: 1920px;
+      height: 602px;
+      left: 0px;
+      top: 478px;
+	      }
+		  
+/*----------------------------GRAS------------------------------------*/	  
+#StartseiteGras {
+      background-image:url(Assets/0StartseiteGras.png);
+	  position: absolute;
+      width: 439px;
+      height: 503px;
+      transform-style: preserve-3d;
+      left: 0px;
+      top: 0px;
+      transform: translate3d(-107px, 627px, 0px) rotateZ(-18deg);
+	  animation-name: graswedeln;
+	  animation-duration: 12s;
+	  animation-iteration-count: infinite;
+	  overflow:hidden;
+
+}
+
+ @keyframes graswedeln{
+      0% {
+        transform: translate3d(-107px, 627px, 0px) rotateZ(-18deg);
+        animation-timing-function: ease-in-out;
+      }
+      50% {
+        transform: translate3d(-19px, 601px, 0px) rotateZ(-5deg);
+        animation-timing-function: ease-in-out;
+      }
+      100% {
+        transform: translate3d(-107px, 627px, 0px) rotateZ(-18deg);
+        animation-timing-function: linear;
+      }
+    }
+	
+
+/*------------------------LOGO------------------------------------*/
+#StartseiteLogo {
+      background-image:url(Assets/0StartseiteLogo.png);
+	  position: absolute;
+      width: 1145px;
+      height: 655px;
+      transform-style: preserve-3d;
+      left: 0px;
+      top: 0px;
+      transform: translate3d(-1260px, 600px, 0px);
+	  transform-style: preserve-3d;
+	  animation-name: logoflug;
+	  animation-delay: 0.9s;
+	  animation-timing-function:ease-in;
+	  animation-duration: 0.7s;
+	  animation-iteration-count: 1;
+	  animation-fill-mode:forwards;
+	  overflow:hidden;
+	  	  }
+
+
+    @keyframes logoflug {
+      0% {
+         transform: rotateZ(-64.33deg);
+         animation-timing-function: cubic-bezier(0.5318, 0.0281, 0.6989, 0.6627);
+        animation-timing-function: ease-in;
+		transform: translate3d(-1260px, 600px, 0px);
+    	animation-timing-function: cubic-bezier(0.4823, 0.0234, 0.8147, 0.6223);
+		animation-timing-function: cubic-bezier(0.4649, 0.026, 0.7948, 0.6525);
+	
+      }
+
+  
+      100% {
+		transform: translate3d(0px, 25px, 0px);
+        transform: rotateZ(16.17deg);
+        animation-timing-function: linear;
+			
+		
+      }
+    }
+	
+	
+/*----------------------------------STARTBUTTON------------------------*/	
+input[type="file"] {
+    display: none;
+}
+
+.Fileloader {
+	display: block;
+	background-image:url(Assets/0StartseiteButtonNeutral.png);
+	background-repeat:no-repeat;
+	background-position:center;
+    cursor: pointer;
+      position: absolute;
+      height: 160px;
+      width: 614px;
+      top: 780px;
+      left: 653px;
+      transform: scale3d(0.001, 0.001, 0.001);
+      transform-style: preserve-3d;
+	  animation-name: buttonflug;
+	  animation-delay: 1.5s;
+	  animation-timing-function:ease-in;
+	  animation-duration: 0.6s;
+	  animation-iteration-count: 1;
+	  animation-fill-mode:forwards;
+}
+
+.Fileloader:hover {
+	background-image:url(Assets/0StartseiteButtonMouseOver.png);
+}
+
+
+    @keyframes buttonflug {
+      0% {
+        transform: scale3d(0.001, 0.001, 0.001);
+        animation-timing-function: ease-in;
+      }
+      83.3333% {
+        transform: scale3d(1.1, 1.1, 1.1);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: scale3d(1, 1, 1);
+        animation-timing-function: linear;
+      }
+    }
+	
+	
+	/*-----------------------------SCHIRI--------------------------------------*/
+	
+	#StartseiteSchiri {
+      background-image:url(Assets/0StartseiteSchiri.png);
+      position: absolute;
+      width: 672px;
+      height: 1055px;
+      transform-style: preserve-3d;
+      left: 0px;
+      top: 0px;
+      transform: translate3d(1928px, 1080px, 0px);
+	  overflow:hidden;
+
+	  animation-name: SchiriEinflug;
+	  animation-delay: 0.25s;
+	  animation-timing-function:ease-in;
+	  animation-duration: 0.75s;
+	  animation-iteration-count: 1;
+	  animation-fill-mode:forwards;
+	  	  }
+
+    @keyframes SchiriEinflug {
+      0% {
+        transform: translate3d(1928px, 1080px, 0px);
+        animation-timing-function: ease-in;
+      }
+      86.6667% {
+        transform: translate3d(1247px, 25px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(1265px, 45px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	
+	/*----------------------------WOLKEN-------------------------------*/
+		#Wolke1 {
+      background-image:url(Assets/0StartseiteHGWolke1.png);
+      position: absolute;
+      width: 423px;
+      height: 202px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1029px, 394px, 0px);
+	  background-size:contain;
+	  overflow:hidden;
+	  
+	  animation-name: Wolke1;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 36s;
+	  animation-iteration-count:infinite;
+
+	  	  }
+		  
+		      @keyframes Wolke1 {
+      0% {
+        transform: translate3d(-1029px, 394px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(2537px, 394px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	/* ********* */
+
+		#Wolke2 {
+      background-image:url(Assets/0StartseiteHGWolke1.png);
+      position: absolute;
+      width: 423px;
+      height: 202px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1029px, 394px, 0px);
+	  overflow:hidden;
+
+	  animation-name: Wolke2;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 12s;
+	  animation-iteration-count:infinite;
+	  	  }
+		  
+		      @keyframes Wolke2 {
+      0% {
+        transform: translate3d(-890 px, 394px, 0px)
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(2537px, 394px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	/* ********* */
+	
+	
+		#Wolke3 {
+      background-image:url(Assets/0StartseiteHGWolke2.png);
+      position: absolute;
+      width: 345px;
+      height: 153px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1029px, 60px, 0px);
+	  overflow:hidden;
+
+	  animation-name: Wolke3;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 30s;
+	  animation-iteration-count:infinite;
+	  	  }
+		  
+		      @keyframes Wolke3 {
+      0% {
+        transform: translate3d(-1029px, 60px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(2613px, 60px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	/* ********* */
+	
+	
+	 #Wolke4 {
+      background-image:url(Assets/0StartseiteHGWolke2.png);
+      position: absolute;
+      width: 345px;
+      height: 153px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1029px, 60px, 0px);
+	  overflow:hidden;
+
+	  animation-name: Wolke4;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 10s;
+	  animation-iteration-count:infinite;
+	  	  }
+		  
+		      @keyframes Wolke4 {
+      0% {
+        transform: translate3d(-1029px, 60px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(2613px, 60px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	/* ********* */
+	
+		 #Wolke5 {
+      background-image:url(Assets/0StartseiteHGWolke3.png);
+      position: absolute;
+      width: 1030px;
+      height: 435px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1029px, 60px, 0px);
+	  overflow:hidden;
+
+	  animation-name: Wolke5;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 40s;
+	  animation-iteration-count:infinite;
+	  	  }
+		  
+		      @keyframes Wolke5 {
+      0% {
+        transform: translate3d(-1030px, 88px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(1926px, 88px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	/* ********* */
+	
+		 #Wolke6 {
+      background-image:url(Assets/0StartseiteHGWolke3.png);
+      position: absolute;
+      width: 1030px;
+      height: 435px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1029px, 60px, 0px);
+	  overflow:hidden;
+
+	  animation-name: Wolke6;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 16s;
+	  animation-iteration-count:infinite;
+	  	  }
+		  
+		      @keyframes Wolke6 {
+    0% {
+        transform: translate3d(-593px, 88px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(1926px, 88px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	/* ********* */
+	
+	 #Wolke7 {
+      background-image:url(Assets/0StartseiteHGWolke4.png);
+      position: absolute;
+      width: 895px;
+      height: 269px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1030px, 459px, 0px);
+	  background-size:contain;
+	  overflow:hidden;
+
+	  animation-name: Wolke7;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 20s;
+	  animation-iteration-count:infinite;
+	  	  }
+		  
+		      @keyframes Wolke7 {
+   0% {
+        transform: translate3d(-1030px, 459px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(2059px, 462px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+	/* ********* */
+	
+	 #Wolke8 {
+      background-image:url(Assets/0StartseiteHGWolke4.png);
+      position: absolute;
+      width: 895px;
+      height: 269px;
+      left: 0px;
+      top: 0px;
+      transform-style: preserve-3d;
+      transform: translate3d(-1030px, 459px, 0px);
+	  background-size:contain;
+	  overflow:hidden;
+	  
+	  animation-name: Wolke8;
+	  animation-delay: 0s;
+	  animation-timing-function:linear;
+	  animation-duration: 8s;
+	  animation-iteration-count:infinite;
+	  
+	  	  }
+		  
+		      @keyframes Wolke8 {
+      0% {
+        transform: translate3d(-800px, 459px, 0px);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: translate3d(2059px, 462px, 0px);
+        animation-timing-function: linear;
+      }
+    }
+/* ********* */
