@@ -8,14 +8,11 @@
     padding: 0;
 	overflow:hidden;
 	position:fixed;
+	font-family: "Didact Gothic";
 
     }
 
 
-    p, h1, h2, a, #neueDatei {
-	  font-family: "Didact Gothic";
-	}
-	  
 	h2 {	
 	  text-align: center;
       font-size: 48px;

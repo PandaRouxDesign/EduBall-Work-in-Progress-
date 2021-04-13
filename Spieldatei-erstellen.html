@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html lang "de">
 <head>
-<meta charset="utf-8"
+<meta charset="utf-8">
 <meta name="viewport" "content="width=device-width, initial-scale=1.0">
 
 <!--CSS -->
-<link rel="stylesheet" href="generalCSS.css">
+<link rel="stylesheet" href="Datei.css">
 
-<!--JAVASCRIPT 
-<script src="Spiel.js">-->
+JAVASCRIPT 
+
+
+<link rel="shortcut icon" href="favicon.ico"/> 
 <title>neues Spiel</title>
 </head>
 
+
 <body>
-yeah!
+
+<div id="HGPlatz"></div>
+<div id="main">
+<div id="Logo"></div>
+    
+<div id="Schueler">
+<h1>SCHÜLER</h1>
+
+	<div id="awrapper">
+    <a href="#Nam">Schülernamen</a>
+    <a href="#Numm">Teamnummern</a>
+    </div>
+
+    
+	<div class="items">
+
+	<div id="Numm">
+        <label for="kids" id="kidslabel">Spieleranzahl eingeben:</label><br>       
+        <input id="kids" name="kids"></input><br> 
+        <a type="button" href="#" class= "Trickots">Trickots zum Ausdrucken</a>
+    </div>
+
+	<div id="Nam">
+       		<label for="txtSchueler" id="txtSchuelerlabel">Namensliste laden:</label> <br> 
+        	<input type="file" id="txtSchueler" class="selector" /></input><br> 
+        	<!-- <div>Folgende Schueler spielen mit:<br>  <div id="filecontents"></div></div><br> -->
+      
+        	<label for="text" id="textlabel">Folgende Schüler spielen mit:</label> <br> 
+        	<textarea id="text" name="text" cols="50" rows="30" placeholder="Jeden Schueler in eine neue Zeile eingeben. Ohne Trennungszeichen!"></textarea><br> 
+        	<a type="button" href="#" class= "Trickots">Trickots zum Ausdrucken</a>
+	</div>
+    
+    <div id="default"></div>
+    
+	</div>    
+</details>
+</div>
+
+<div id="Aufgaben">
+	<h1>AUFGABEN</h1>
+    
+	<div id="AufgabenDateiLaden"><br> 
+    <label for="txtAufgaben" id="txtAufgabenlabel">Aufgabenliste laden:</label><br> 
+    <input type="file" id="txtAufgaben" class="selector" /> </input><br> 
+    </div>
+    
+    <div id="AufgabenEingabe">
+    <label for="aufgaben" id="Aufgabenlabel">Aufgaben:</label><br>  
+    <textarea id="aufgaben" name="text" cols="50" rows="30" placeholder="Jede Aufgabe in eine neue Zeile eingeben. Ohne Trennungszeichen!"></textarea><br> 
+    </div>
+    
+</div>
+
+<div id="Hilfe">
+<h2>SPIELDATEI ANLEGEN</h2>
+<details><summary><h3>Hilfe<h3></summary>
+<ul>
+<li> Geben Sie jedem Schüler eine <b>Nummer</b>,<br>oder legen Sie eine <b>Namensliste</b> an. </li><br>
+<li> Sie können nummerierte<br><b>Trickot-Vorlagen</b> herunterladen,<br>oder die Blanko-Vorlagen<br>mit Namen beschriften. </li><br>
+<li> Sie können bereits vorhandene<br><b>Namens- & Aufgabenlisten</b> hochladen,<br>und Einträge hinzufügen.</li><br>
+<li> Sie können auch <b>mehrere Aufgabenlisten</b><br>nacheinander hochladen.</li><br>
+<li> Mit <b>"Datei speichern"</b> erstellen Sie<br>eine neue Spieldatei.<br>Diese können Sie bei <b>Spielstart</b> verwenden. </li><br>
+</ul>
+</details>
+
+</div>
+<div id="Buttons">
+	<div id="Speichern"><button type="button" id="save">SPEICHERN</button></div><br>
+    <div id="Start"><a href="EduBall.html">Spiel starten</a></div>
+</div>
+
+</div>
+
+<script src="Datei.js"></script>
 </body>
 </html>
