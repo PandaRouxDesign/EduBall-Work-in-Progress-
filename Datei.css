@@ -4,7 +4,6 @@
 /* Karteinavi */
 div.items div:not(:target) {display: none}
 div.items div:target {display: block}
-
 /*---------------------------------------------HINTERGRUND-----------------------------------------------------------*/
 body {
 	background-image:url(Assets/0StartseiteHGHimmel.png);
@@ -14,9 +13,7 @@ body {
 	position:fixed;
 	 font-family: "Didact Gothic";
 	 font-size: 20px;
-
 }
-
 #Logo {
       background-image:url(Assets/Logoklein.png);
 	  position: absolute;
@@ -26,7 +23,6 @@ body {
 	  justify-self: center;
 	  align-self: center;
 }
-
 #HGPlatz {
       background-image:url(Assets/0StartseiteHGPlatz.png);
       position: absolute;
@@ -35,8 +31,6 @@ body {
       left: 0px;
       top: 478px;
 	      }
-
-
 #main {
 	 position: absolute;
 	 width:1920px;
@@ -48,10 +42,7 @@ body {
 	 grid-template-rows: 200px 1fr 200px;
 	 grid-gap: 20px;
 }
-
-
 /*--------------------------------------------GRID-----------------------------**/
-
 #Logo {
       background-image:url(Assets/Logoklein.png);
 	  position: absolute;
@@ -61,59 +52,46 @@ body {
 	  justify-self: center;
 	  align-self: center;
 }
-
 #Schueler {
 	grid-column: 2/3; grid-row: 1/3;	
 }
-
 #Aufgaben {
 	grid-column: 3/4; grid-row: 1/3;
 }
-
 #Hilfe {
 	grid-column: 1/2; grid-row: 2/4;	
 }
-
 #Buttons {
 	grid-column: 1/4; grid-row: 3;
 	justify-self: center;
 }
-
 /*------------------------------------------MAIN---------------------------------------------*/
-
 #awrapper{
 	  justify-content: space-around;
 	  display: flex;
 	  background-color: rgba(0, 0, 0, 0.1);
 	  font-size: 25px;
     }
-
 a {
 		  text-decoration:none;
 		  color:#900;
 }
-
 a:hover{
 	  -webkit-text-fill-color: white;
 	  background-color: orange;
     }
-
 h1, h2{
 	  align-self: center;
 	  display: flex;
 	  justify-content: center;
 	  background-color: rgba(0, 0, 0, 0.2); 
 	  font-weight: bolder;
-    }
-	
+    }	
 #Schueler, #Aufgaben {
 		 line-height: 2;
 		 font-weight: bold;
 	}
-	
-
 /*---------------------------------------BUTTONS-----------------------------------*/
-
 #save{
 	box-shadow:inset -3px 5px 9px 2px #cf866c;
 	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
@@ -127,12 +105,10 @@ h1, h2{
 	padding:20px 60px;
 	text-decoration:none;
 }
-
 #save:hover {
 	background:linear-gradient(to bottom, #ba7017 5%, #fff200 100%);
 	background-color:#ba7017;
 }
-
 #Start {
 	  text-align: center;
 	  align-self: center;

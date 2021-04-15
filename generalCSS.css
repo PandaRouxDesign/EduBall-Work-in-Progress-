@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
     body {
 	width:1920px;
 	height:1080px;
@@ -9,16 +8,7 @@
 	overflow:hidden;
 	position:fixed;
 	font-family: "Didact Gothic";
-
     }
-
-
-	h2 {	
-	  text-align: center;
-      font-size: 48px;
-      font-weight: bold;
-    }
-	
     h1 {
 	  text-transform:uppercase;
 	  /*-webkit-text-stroke: 2px white;*/
@@ -26,7 +16,11 @@
       font-size: 100px;
       font-weight: 900;
     }
-	
+	h2 {	
+	  text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+    }	
 	#neueDatei {
 	font-size: 16px;	
 	position: absolute;
@@ -35,9 +29,7 @@
 	text-decoration:none;
 	left: 860px;
 	bottom: 100px;
-    }
-	
+    }	
 	#neueDatei:hover {
 	  -webkit-text-fill-color: orange;
     }
-	

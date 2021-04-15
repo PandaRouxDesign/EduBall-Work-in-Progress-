@@ -3,14 +3,9 @@ var content;
 var player;
 var exercises;
 var results;
-
-
 window.onload = function () {
-    if (window.File && window.FileReader && window.FileList && window.Blob) {
-		
-		
-/* --------------------------------------------AUFGABEN DATEI LADEN (FUNZT!!!!!)------------------------------------------- */		
-		
+    if (window.File && window.FileReader && window.FileList && window.Blob) {	
+/* -------------------------------------------------------------------AUFGABEN DATEI LADEN------------------------------------------- */		
         var fileSelected = document.getElementById('txtAufgaben');
         fileSelected.addEventListener('change', function (e) {
             var fileExtension = /text.*/;
@@ -26,14 +21,9 @@ window.onload = function () {
             else {
                 alert("Achtung! Es muss eine txt Datei ausgewählt werden.");
             }
-        }, false);
-
-
-		
-/* --------------------------------------------SCHÜLER DATEI LADEN (FUNZT!!!!!)------------------------------------------- */	
-
-
-        var fileSelectedSchueler = document.getElementById('txtSchueler');
+        }, false);		
+/* ------------------------------------------------------------------------SCHÜLER DATEI LADEN--------------------------------------------------------- */	
+  		var fileSelectedSchueler = document.getElementById('txtSchueler');
         fileSelectedSchueler.addEventListener('change', function (e) {
             var fileExtension = /text.*/;
             var fileTobeReadSchueler = fileSelectedSchueler.files[0];
@@ -54,25 +44,19 @@ window.onload = function () {
         alert("Dateiformat wird nicht unterstützt.");
     }
 }
-
 function parse_schueler(string) {
     var fileContents = document.getElementById('text');
     fileContents.value += string.trim();
     fileContents.value += "\n"
 }
-
 function parse(string) {
     exercises = [];
     results = [];
-
     var lines = string.split("\n");
-
     var fileContents = document.getElementById('aufgaben');
-
     for (var i = 0; i < lines.length - 1; i++) {
         if(lines[i] != ""){
             fileContents.value += lines[i] + "\n";
-
             var split = lines[i].split("=");
             exercises.push(split[0].trim());
             if(split.length > 1){
@@ -87,14 +71,21 @@ function parse(string) {
 
 
 
+
+
+
+
+
 	
 /* -----------------------------------------------------------------------------AB HIER FUNZT NIX-----------------------------------------------------*/
 	var saveBtn = document.getElementById("save");
 	saveBtn.addEventListener("click", function () {
 	
     var bool1 = false;
+	var NameTab = document.getElementById("Nam");
+	var NummTab = document.getElementById("Numm")
 	
-    if(document.getElementById('text').value != "" && document.getElementById("Nam").style.display != "none" || document.getElementById("kids").value > 0 &&  document.getElementById("Numm").style.display != "none"){
+    if(document.getElementById('text').value != "" && NameTab.style.display != "none" || document.getElementById("kids").value > 0 &&  NummTab.style.display != "none"){
         bool1 = true;
     }
     if (bool1 && document.getElementById("aufgaben").value != "") {
@@ -104,7 +95,7 @@ function parse(string) {
         var team_blau = [];
         var string1 = "";
         var string2 = "";
-        if (document.getElementById("Numm").style.display != "none") {
+        if (NummTab.style.display != "none") {
             // Zahlen
             var team1_size;
             var team2_size;

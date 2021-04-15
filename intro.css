@@ -1,7 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
-
 /*-------------------HINTERGRUND---------------*/
 #Intro {
 	display:none;
@@ -11,28 +9,21 @@
 	height:1080px;
 	-webkit-animation: slide 0.6s linear infinite;
 	position:fixed;
-
 }
-
 @-webkit-keyframes slide {
     from { background-position: 0 0; }
     to { background-position: 0 -2160px; }
 }
-
-
 /*-------------------VS---------------*/
-
 #VS {
-	background-image:url(Assets/1IntroVS.png);
-	
+	background-image:url(Assets/1IntroVS.png);	
 	  position: absolute;
       width: 743px;
       height: 1080px;
       left: 589px;
       top: 0px;
       transform-style: preserve-3d;
-      transform: scale3d(0, 1, 1);
-	  
+      transform: scale3d(0, 1, 1);	  
 	  animation-name: VS;
 	  animation-delay: 1s;
 	  animation-timing-function:linear;
@@ -40,8 +31,7 @@
 	  animation-iteration-count: 1;
 	  animation-fill-mode:forwards;
 }
-
-    @keyframes VS {
+  @keyframes VS {
       0% {
         transform: scale3d(0, 1, 1);
         animation-timing-function: ease-in;
@@ -55,18 +45,14 @@
         animation-timing-function: linear;
       }
     }
-
-
 /*-------------------HASE---------------*/
 #IntroHase {
-	background-image:url(Assets/1IntroHase.png);
-	
+	background-image:url(Assets/1IntroHase.png);	
       position: absolute;
       width: 941px;
       height: 1068px;
       left: -29px;
-      top: 1111px;
-	  
+      top: 1111px;	  
 	  animation-name: IntroHase;
 	  animation-delay: 0s;
 	  animation-timing-function:linear;
@@ -74,8 +60,7 @@
 	  animation-iteration-count: 1;
 	  animation-fill-mode:forwards;
 }
-
-    @keyframes IntroHase {
+  @keyframes IntroHase {
   0% {
         top: 1111px;
         animation-timing-function: ease-in;
@@ -89,21 +74,16 @@
         animation-timing-function: linear;
       }
     }
-
-
 /*-------------------HASE LOGO---------------*/
-
 #LogoHase {
-	background-image:url(Assets/1IntroLogoHase.png);
-	
+	background-image:url(Assets/1IntroLogoHase.png);	
       position: absolute;
       width: 251px;
       height: 264px;
       transform-style: preserve-3d;
       top: 140px;
       transform: translate3d(0px, 0px, 1600px) rotateY(0deg);
-      left: 1500px;
-	  
+      left: 1500px;	  
 	  animation-name: LogoHase;
 	  animation-delay: 0s;
 	  animation-timing-function:linear;
@@ -111,8 +91,7 @@
 	  animation-iteration-count: 1;
 	  animation-fill-mode:forwards;
 }
-
-    @keyframes LogoHase {
+  @keyframes LogoHase {
       0% {
         transform: translate3d(0px, 0px, 160px) rotateY(0deg);
         left: 1500px;
@@ -123,20 +102,15 @@
         left: 50px;
         animation-timing-function: linear;
       }
-    }
-	
-	
-/*-------------------MAUS---------------*/	
-	
+    }	
+/*-------------------MAUS---------------*/		
 #IntroMaus {
-	background-image:url(Assets/1IntroMaus.png);
-	
+	background-image:url(Assets/1IntroMaus.png);	
       position: absolute;
       width: 989px;
       height: 973px;
       left: 1082px;
-      top: -979px;
-	  
+      top: -979px;	  
 	  animation-name: IntroMaus;
 	  animation-delay: 0s;
 	  animation-timing-function:linear;
@@ -144,8 +118,7 @@
 	  animation-iteration-count: 1;
 	  animation-fill-mode:forwards;
 }
-
-    @keyframes IntroMaus {
+  @keyframes IntroMaus {
       0% {
         top: -979px;
         animation-timing-function: ease-in;
@@ -158,22 +131,17 @@
         top: 106px;
         animation-timing-function: linear;
       }
-    }
-
-	
+    }	
 /*-------------------MAUS LOGO---------------*/
-
 #LogoMaus {
-	background-image:url(Assets/1IntroLogoMaus.png);
-	
+	background-image:url(Assets/1IntroLogoMaus.png);	
       position: absolute;
       width: 300px;
       height: 262px;
       transform-style: preserve-3d;
       top: 720px;
       transform: translate3d(0px, 0px, 160px) rotateY(0deg);
-      left: 170px;
-	  
+      left: 170px;	  
 	  animation-name: LogoMaus;
 	  animation-delay: 0s;
 	  animation-timing-function:linear;
@@ -181,8 +149,7 @@
 	  animation-iteration-count: 1;
 	  animation-fill-mode:forwards;
 }
-
-    @keyframes LogoMaus {
+   @keyframes LogoMaus {
      0% {
         transform: translate3d(0px, 0px, 160px) rotateY(0deg);
         left: 50px;
@@ -194,5 +161,3 @@
         animation-timing-function: linear;
       }
     }
-	
-	-*/
