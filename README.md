@@ -9,10 +9,16 @@
 mit ganz viel Liebe an das Team!
 
 
+
+
 Gespielt wird mit **Pfeiltasten**
+
+
 Wenn die Namen eingeblendet werden, kann der Lehrer mit Links- oder Rechts angeben, welcher Schüler die eingeblendete Frage richtig beantwortet hat.
 
+
 Mit der Pfeiffe in der rechten oberen Ecke kann er das Spiel abpfeiffen.
+
 
 ...Fortsetzung folgt....
 
@@ -27,3 +33,4 @@ Mit der Pfeiffe in der rechten oberen Ecke kann er das Spiel abpfeiffen.
 
 
 ...Fortsetzung folgt....
+
