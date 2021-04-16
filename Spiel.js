@@ -1,6 +1,5 @@
 // JavaScript Document
-////////////////////////////////////////////////////////////////////INTRO//////////////////////////////////////////////////////
-
+////////////////////////////////////////////////////////////////////////////////INTRO//////////////////////////////////////////////////////
 <!------SEITENWECHSEL SCRIPT---->
     function show(shown, hidden) {
       document.getElementById(shown).style.display='block';
@@ -16,9 +15,7 @@ function IntroTimer() {
 		Intro.style.display = "none";
 		FUßBALLRUNDE();
     }	
-
-//////////////////////////////////////////////////////////////////SPIEL//////////////////////////////////////////////////////////////////////////
-	
+////////////////////////////////////////////////////////////////////////////////SPIEL//////////////////////////////////////////////////////////////////////////	
 <!------------------------------Variablen----------------------------------> 	
 var HasenScore = 0;
 var MausScore = 0;
@@ -35,7 +32,7 @@ var MausPunkte = document.getElementById("Mausscore");
 var SchiriSprite = document.getElementById("SpielSchiriSprite");
 var Schiri = document.getElementById("SpielSchiri");	
 
-var AufgabenArray = ["Wie macht die Kuh?", "Wie macht die Katze?", "Warum ist die Banane krummm?", "Wie heißt der Kaiser von Pisa?", "Warum ging das Huhn über die Straße?", "Warum liegt hier eigentlich Stroh rum?", "4+4"];
+var AufgabenArray = ["Wie macht die Kuh?", "Wie macht die Katze?", "Warum ist die Banane krumm?", "Wie heißt der Kaiser von Wesel?", "Warum ging das Huhn über die Straße?", "Warum liegt hier eigentlich Stroh rum?", "4+4", "Was ist der Sinn des Lebens", "Wo bin ich?", "Wie nennt man einen Bumerang, der nicht zurück kommt?", "Was ist grün, klein, und dreieckig?", "Was ist grün und wenn man auf den Knopf drückt, bleibts grün?", "Wie nennt man die Steigerung von Buchstabensuppe?", "Welcher war der höchsten Berg der Welt bevor der Mount Everest entdeckt wurde?"];
 var Aufgabe = "";
 var Aufgabenfeld  = document.getElementById("Aufgabenfeld");
 var AufgabeDiv = document.getElementById("Aufgabe");
@@ -64,76 +61,83 @@ var TorMaus = document.getElementById("TorMaus");
 var Ball = document.getElementById("SpielBall");
 var TorAni = document.getElementById("Tooor");
 
-
-
 function FUßBALLRUNDE() {
 Anpfiff();
-Namensetzen();
-Einfliegen();
 Tastenabfrage();
 Punktesetzen();			
-	
-<!---------------------------------------Punkte-----------------> /////////////////////FUNZT!!!!!
+<!---------------------------------------Punkte-----------------> 
 function Punktesetzen(){
 console.log (Hasenscore, MausScore);
 HasenPunkte.textContent = HasenScore;
 MausPunkte.textContent = MausScore;	
 }
-<!--------------------------------------------------Schiri--------> //////////////// Blendet bei Neustart nicht ein D:
+<!--------------------------------------------------Schiri--------> 
 function Anpfiff(){
 Schiri.style.display = "block";
 SchiriSprite.style.display = "block";
 Schiri.style.animation = "SchiriAnpfiff 1s ease-in 5s 1 forwards";
 SchiriSprite.style.animation = "SchiriSprite 5s steps(9) 1 forwards";
 Torgeschossen = false;
-SchiriSprite.addEventListener("animationend", Aufgabesetzen);
+Schiri.addEventListener("animationend", Aufgabesetzen);
 }
-<!-----------------------------------------------Aufgabe------------------------> ////////////////// Blendet bei Neustart nicht ein D: 
+<!-----------------------------------------------Aufgabe------------------------>
 function Aufgabesetzen(){
 PfiffSound.play();
+Schiri.removeEventListener("animationend", Aufgabesetzen);
 Aufgabe = AufgabenArray[Math.floor(Math.random()*AufgabenArray.length)];
+//AufgabenArray.splice(AufgabenArray.indexOf(Aufgabe),1);  // gestellte Aufgabe aus dem Array kicken
 Aufgabenfeld.textContent = Aufgabe;
 AufgabeDiv.style.display = "block";
-AufgabeDiv.style.animation = "AufgabeEinblenden 3s linear 1 forwards"
+AufgabeDiv.style.animation = "AufgabeEinblenden 4s linear 1 forwards"
+AufgabeDiv.addEventListener("animationend", Namensetzen);
+AufgabeDiv.addEventListener("animationend", Einfliegen);
 }
-<!--------------------------------------------------SpielerNamen------------------->////////////////// FUNZT!!
+<!--------------------------------------------------SpielerNamen------------------->
 function Namensetzen() {
-
 HaseSchueler = HasenArray[Math.floor(Math.random()*HasenArray.length)];
 MausSchueler = MausArray[Math.floor(Math.random()*MausArray.length)];
 
 HaseNamensfeld.textContent = HaseSchueler;
 HaseNamensfeld.style.display = "block";
 HaseNameAni.style.display = "block";
-HaseNameAni.style.animation = "SpielerNameHaseEinflug 0.5s linear 9.5s 1 forwards";	
+HaseNameAni.style.animation = "SpielerNameHaseEinflug 0.5s linear 1 forwards";	
 MausNamensfeld.textContent = MausSchueler;
 MausNamensfeld.style.display = "block";
 MausNameAni.style.display = "block";
-MausNameAni.style.animation = "SpielerNameMausEinflug 0.5s linear 9.5s 1 forwards";
+MausNameAni.style.animation = "SpielerNameMausEinflug 0.5s linear 1 forwards";
 }
-<!------------------------------------------VG Spieler----------------------------------->/////////////////FUNZT!!!
+<!------------------------------------------VG Spieler----------------------------------->
 function Einfliegen() {
+AufgabeDiv.removeEventListener("animationend", Namensetzen);
+AufgabeDiv.removeEventListener("animationend", Einfliegen);
 <!------Spieler VG - Hase ------>
 HaseSpieler.style.display = "block";
 HaseSprite.style.display = "block";
 HaseSprite.style.animation = "HaseSpriteIdle 2s steps(4) infinite forwards";
-HaseSpieler.style.animation = "SpielerHaseEinflug 1s ease-in 9s 1 forwards";
+HaseSpieler.style.animation = "SpielerHaseEinflug 1s ease-in 1 forwards";
 <!------Spieler VG - Maus ------>
 MausSpieler.style.display = "block";
 MausSprite.style.display = "block";
 MausSprite.style.animation = "MausSpriteIdle 2s steps(4) infinite forwards";
-MausSpieler.style.animation = "SpielerMausEinflug 1s ease-in 9s 1 forwards";	
+MausSpieler.style.animation = "SpielerMausEinflug 1s ease-in 1 forwards";	
 }
 
 function Ausfliegen () {
+	Schiri.style.animation = "bla  1s linear 1 forwards";
+	SchiriSprite.style.animation = "bla  1s linear 1 forwards";		
+	Schiri.style.display = "none";
+	SchiriSprite.style.display = "none";
+	TorAni.style.animation = "bla 1s linear 1 forwards";
+	AufgabeDiv.style.animation = "bla 1s linear 1 forwards";
+	TorAni.style.display = "none";
+	AufgabeDiv.style.display = "none"; 
+	
 	HaseSpieler.style.animation = "SpielerHaseAusflug 1s ease-in 1 forwards"; 
 	MausSpieler.style.animation = "SpielerMausAusflug 1s ease-in 1 forwards"; 
 	HaseNameAni.style.animation = "SpielerNameHaseAusflug 1s ease-in 1 forwards"; 
-	MausNameAni.style.animation = "SpielerNameMausAusflug 1s ease-in 1 forwards"; 	
+	MausNameAni.style.animation = "SpielerNameMausAusflug 1s ease-in 1 forwards";
 }
-
-
-<!------------------------------------------TASTENABFRAGE--------------------------------> ////////////////// FUNZT!!
+<!------------------------------------------TASTENABFRAGE-------------------------------->
 function Tastenabfrage() { 
 MausSpieler.addEventListener("animationend", Ausflug);
 		function Ausflug() {
@@ -156,9 +160,7 @@ else if (event.keyCode === 39) { //Pfeil Rechts -----> Maus Schuss
 		} // Ende MausSchuss
 					} //Ende Taste	
 } //Ende Tastenabfrage
-
-<!------------------------------------------FELDSPIELER-------------------------------------> ////////////////// FUNZT!!
-
+<!------------------------------------------FELDSPIELER------------------------------------->
 function Feldkick () {
 HaseSprite.removeEventListener("animationend", Feldkick);
 MausSprite.removeEventListener("animationend", Feldkick);		
@@ -188,9 +190,7 @@ FeldMaus2.style.animation = "FeldSpielerIdle 2s steps(4) infinite forwards";});
 }
 setTimeout(Ballflug, 1000); 
 } //Ende Feldspielerkick
-
-<!-------------------------------------------------------BALLFLUG----------------------------> ////////// FUNZT!! /Bzw. Ball zurück zur Mitte über CSS-Notbehelf
-
+<!-------------------------------------------------------BALLFLUG---------------------------->
 function Ballflug(){
 	if (geradeschiesst == "Hase"){
 		if (BallPosition == 1) { 	  //Hase2 schießt
@@ -205,12 +205,11 @@ function Ballflug(){
 								}
 		else if (BallPosition == 4) {//Maus1 schießt
 		Ball.style.animation = "FeldMaus1-Mitte 1s ease-in-out 1 forwards";
-		naechste ();
 								}
 		else if (BallPosition == 5) {//Maus2 schießt
 		Ball.style.animation = "FeldMaus2-FeldMaus1 1s ease-in-out 1 forwards";	
 		}										
-	BallPosition -=1;							
+	BallPosition -=1;						
 	}//Ende Hase
 	else if (geradeschiesst == "Maus"){	
 		if (BallPosition == 1) {//Hase2 schießt
@@ -231,11 +230,10 @@ function Ballflug(){
 		}	
 	BallPosition +=1;
 	}//Ende Maus
-	naechste ();	
+	
+	setTimeout(FUßBALLRUNDE, 3000); 	
 	}//Ende Ballflug
-
-
-<!-----------------------------------------------------Tor-------------------------------------------->////////////////// FUNZT!!
+<!-----------------------------------------------------Tor-------------------------------------------->
 function Tor (){
 	if (geradeschiesst == "Hase"){
 	TorMaus.style.animation = "TorwartSprung 1s steps(5) 1 forwards";
@@ -259,36 +257,8 @@ function Torani (){
 	Punktesetzen();
 	}//Ende TorAni
 } //Ende Tor
-	
-
-
-
-<!-----------------------------------------------nächste Runde--------------------------------------------------->		
-	
-
-
-function naechste (){
-Schiri.style.animation = "bla  1s linear 1 forwards";
-SchiriSprite.style.animation = "bla  1s linear 1 forwards";	
-TorAni.style.animation = "bla 1s linear 1 forwards";
-AufgabeDiv.style.animation = "bla 1s linear 1 forwards";
-	
-Schiri.style.display = "none";
-SchiriSprite.style.display = "none";
-TorAni.style.display = "none";
-AufgabeDiv.style.display = "none";
-
-FUßBALLRUNDE();
-}	
 } //Ende FußballRunde
-
-
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-<!---------------SIEEEEG -------------------------->
-
+///////////////////////////////////////////////////////////////////////////////////////SIEEEEEEEEG/////////////////////////////////////////////////////////
 var Mausparty = document.getElementById("TeamMaus");
 var Hasenparty = document.getElementById("TeamHase");
 
