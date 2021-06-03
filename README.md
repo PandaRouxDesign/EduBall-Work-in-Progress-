@@ -2,6 +2,14 @@
 
 # EDUBALL
 
+## ACHTUNG ##
+
+
+Da das Erstellen und Laden von Spieldateien noch nicht funktioniert, im Titel-Screen das **Spiel über den Link oben links in der Ecke starten**!!!! ;-) (nicht über den fetten Button.)
+
+
+
+
 
 ## Version 2.0 von [Mathefußball](https://github.com/johngolio/Mathefussball)##
 
